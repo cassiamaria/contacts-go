@@ -47,9 +47,6 @@ export function Header() {
         <Icon as={RiSearchLine} fontSize="20"/>
       </Flex>
 
-      <Flex>
-        
-      </Flex>
     </Flex>
   );
 }
