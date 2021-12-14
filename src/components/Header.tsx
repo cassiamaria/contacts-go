@@ -11,6 +11,7 @@ export function Header() {
       mx="auto"
       px="6"
       align="center"
+      justify="space-between"
     > 
 
       <Text
