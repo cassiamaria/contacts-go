@@ -1,15 +1,15 @@
 import { Box, Button, Flex, Heading, Icon, Table, Tbody, Td, Th, Thead, Tr, Text, useBreakpointValue } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function ContactList() {
-  //breakpoint medium
+  const { user, signInWithGoogle } = useAuth();
   const isWideVersion = useBreakpointValue({
     base: false,
     md: true
   });
 
-  //breakpoint small
   const smallBreakpoint = useBreakpointValue({
     base: false,
     sm: true
@@ -20,8 +20,8 @@ export default function ContactList() {
       <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
         <Box flex="1" borderRadius={8} bg="gray.800" p="8">
           <Flex mb="8" justify="space-between" align="center">
-            <Heading size="lg" fontWeight="normal">Contatos</Heading>
-            <Link href="contacts/create" passHref>
+            <Heading size="lg" fontWeight="normal">{user?.name}</Heading>
+            <Link href="/contacts/create" passHref>
               <Button
                 as="a"
                 size="sm"

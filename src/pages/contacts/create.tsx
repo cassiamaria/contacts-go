@@ -13,7 +13,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { Input } from "../../components/Form/Input";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
+import { FormEvent, useState } from "react";
 
 type CreateContactData = {
   id: number;
@@ -24,7 +24,7 @@ type CreateContactData = {
   street: string;
   district: string;
   city: string;
-  cep: number;
+  cep: string;
 };
 
 const createContactFormSchema = yup.object().shape({
@@ -47,6 +47,18 @@ export default function CreateContact() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log(values);
   }
+
+  // const [cep, setCep] = useState('');
+
+  // const handleCEP = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setCep(event.target.value.replace(/\D/g, ''));
+  //   console.log(cep)
+  //   fetch(`https://viacep.com.br/ws/${cep}/json/`)
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data)
+  //     })
+  // }
 
   return (
     <Box>
@@ -144,7 +156,7 @@ export default function CreateContact() {
 
           <Flex mt="8" justify="flex-end">
             <HStack spacing="4">
-              <Link href="/" passHref>
+              <Link href="/home" passHref>
                 <Button as="a" colorScheme="whiteAlpha">Cancelar</Button>
               </Link>
               <Button 
