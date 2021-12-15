@@ -2,7 +2,7 @@
 
 Desafio do projeto criar uma agenda de contatos.
 
-**Demo**: https://letmeask-c2500.web.app/
+**Demo**: https://contacts-go.netlify.app/
 
 ## Technologies
 
@@ -20,7 +20,7 @@ Algumas das tecnologias usadas foram:
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://contacts-go.netlify.app/
+$ git clone https://github.com/cassiamaria/contacts-go.git
 $ cd contacts-go
 ```
 
