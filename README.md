@@ -20,7 +20,7 @@ Algumas das tecnologias usadas foram:
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/cassiamaria/contacts-go.git
+$ git clone https://contacts-go.netlify.app/
 $ cd contacts-go
 ```
 
